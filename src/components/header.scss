@@ -1,0 +1,22 @@
+.header {
+padding: 2em 1em 2em;
+max-width: 1260px;
+}
+
+.navigation {
+  display: flex;
+  justify-content: flex-end;
+  gap: 4.5rem;
+}
+
+.nav-link {
+  color: #5a5d7a;
+  text-decoration: none;
+  font-size: 1.2em;
+  font-weight: 400;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: #7795f8;
+  }
+}

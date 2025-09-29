@@ -1,0 +1,182 @@
+$purple: #747fe0;
+$grey: #525f7f;
+$lightGrey: #f0f0f0;
+$fadedPurple: #5a5d7a;
+$fadedBlue: #7795f8;
+$highlighterGreen: #92eac0;
+$linkTeal: #35feff;
+
+.project-card {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0 50px 100px rgba(50,50,93,.05),0 15px 35px rgba(50,50,93,.1),0 5px 15px rgba(0,0,0,.1);
+  overflow: hidden;
+  margin-bottom: 60px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  }
+
+
+}
+
+.project-image {
+  width: 80%; // Match original width
+  position: absolute !important; // Match original positioning
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  
+  // Remove img wrapper styles since img is direct child now
+  
+
+}
+
+// Add project background element like original
+.project-background {
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  height: 110%;
+  width: 83%;
+  background: url('/project-background-white.svg');
+  background-size: cover;
+
+
+}
+
+.project-content {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  padding-right: 60px;
+  width: 50%; // Match original width
+  z-index: 2; // Match original z-index
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+
+
+  // h3 styling (no class needed since it's direct h3)
+  h3 {
+    font-weight: 500; // Match original h3 weight
+    font-size: 1.8em; // Match original h3 size
+    line-height: 38px; // Match original line-height
+    color: $grey; // Use original variable
+    margin-top: 0; // Match original
+    margin-bottom: 35px; // Match original
+  }
+
+  // p styling (no class needed since it's direct p)
+  p {
+    color: $grey; // Use original variable
+    line-height: 27px; // Match original p line-height
+    margin-bottom: 30px; // Match original p margin
+
+    // Bold links like original
+    a {
+      font-weight: bold;
+    }
+  }
+}
+
+// Project skills container (matching original project-skills)
+.project-skills {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+// Individual skill styling (matching original project-skill)
+.project-skill {
+  border-radius: 4px; // Match original
+  border: solid 2px $highlighterGreen; // Match original border and color
+  padding: 8px; // Match original padding
+  margin-right: 10px; // Match original margin
+  margin-bottom: 10px; // Match original margin
+  font-size: 0.85em; // Match original size
+  font-weight: normal; // Reset to normal weight
+  color: $grey; // Match original color
+}
+
+// Project links container (matching original project-links)
+.project-links {
+  display: flex;
+  justify-content: flex-start; // Match original alignment
+  align-items: center;
+  flex-wrap: wrap; // Match original
+}
+
+// Individual link styling (matching original project-link)
+.project-link {
+  margin-right: 20px; // Match original margin
+  margin-top: 20px; // Match original margin
+  white-space: nowrap; // Match original
+  display: inline-block; // Match original display
+  line-height: 40px; // Match original line-height
+  padding: 0 14px; // Match original padding
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08); // Match original
+  border-radius: 4px;
+  letter-spacing: 0.025em; // Match original
+  text-decoration: none;
+  transition: all 0.15s ease; // Match original timing
+  font-size: 0.9em; // Match original size
+  font-weight: 600; // Match original weight
+  box-sizing: border-box; // Match original
+  background: $purple; // Use original variable
+  color: #fff;
+
+  
+  &:hover {
+    background: $fadedBlue; // Use original variable
+    transform: translateY(-1px);
+    box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08); // Match original hover shadow
+  }
+
+  &.secondary {
+    background: #fff; // Match original secondary background
+    color: $purple; // Use original variable
+    
+    &:hover {
+      background: #fff; // Keep white background like original
+      color: $purple; // Keep purple text
+      transform: translateY(-1px);
+      box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08); // Match original hover shadow
+    }
+  }
+}
+
+// Responsive design - keep your mobile styles but update tablet to match original
+@media (max-width: 768px) {
+  .project-card {
+    flex-direction: column;
+  }
+  
+  .project-image {
+    position: relative !important; // Override absolute positioning on mobile
+    width: 100%; // Full width on mobile
+    height: 200px;
+  }
+  
+  .project-content {
+    padding: 1.5rem;
+    width: 100%; // Full width on mobile
+  }
+  
+  .project-links {
+    flex-direction: column;
+    align-items: stretch;
+    
+    .project-link {
+      text-align: center;
+      justify-content: center;
+      margin-right: 0;
+    }
+  }
+}

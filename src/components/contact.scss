@@ -1,0 +1,99 @@
+.contact-section {
+  background-color: #f8f9fa;
+  padding: 4rem 0 6rem;
+  text-align: center;
+}
+
+.contact-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.contact-header {
+  margin-bottom: 3rem;
+}
+
+.contact-title {
+  font-weight: 400;
+  color: #4a5568;
+  margin-bottom: 1rem;
+  font-family: inherit;
+}
+
+.title-underline {
+  width: 60px;
+  height: 4px;
+  background: #6c63ff;
+  margin: 0 auto;
+  border-radius: 2px;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 4rem;
+  flex-wrap: wrap;
+}
+
+.contact-link {
+  color: #4a5568;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.2s ease;
+  font-family: inherit;
+  
+  &:hover {
+    color: #7795f8;
+  }
+  
+  &.github-link {
+    display: flex;
+    align-items: center;
+    
+    .github-icon {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+.separator {
+  color: #a0aec0;
+  font-size: 1.1rem;
+  user-select: none;
+}
+
+.contact-footer {
+  border-top: 1px solid #e2e8f0;
+  padding-top: 2rem;
+}
+
+
+// Responsive design
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 3rem 0 4rem;
+  }
+  
+  .contact-container {
+    padding: 0 1rem;
+  }
+  
+  .contact-title {
+    font-size: 1.75rem;
+  }
+  
+  .contact-links {
+    gap: 1rem;
+    
+    .separator {
+      display: none;
+    }
+  }
+  
+  .contact-link {
+    font-size: 1rem;
+  }
+}
