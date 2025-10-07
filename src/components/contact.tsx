@@ -1,6 +1,8 @@
 import React from 'react';
 import './contact.scss';
-import { FaGithub } from 'react-icons/fa';
+import { FaGithub,} from 'react-icons/fa';
+import { FaGitlab, FaLinkedin,} from 'react-icons/fa6';
+import { MdMail } from 'react-icons/md';
 
 const Contact: React.FC = () => {
   return (
@@ -13,7 +15,7 @@ const Contact: React.FC = () => {
         
         <div className="contact-links">
           <a href="mailto:anishtak282@gmail.com" className="contact-link">
-            anishtak282@gmail.com
+            <MdMail/>
           </a>
           
           <span className="separator">||</span>
@@ -24,7 +26,7 @@ const Contact: React.FC = () => {
             rel="noopener noreferrer"
             className="contact-link"
           >
-            LinkedIn
+            <FaLinkedin/>
           </a>
           
           <span className="separator">||</span>
@@ -36,6 +38,17 @@ const Contact: React.FC = () => {
             className="contact-link github-link"
           >
             <FaGithub/>
+          </a>
+
+          <span className="separator">||</span>
+          
+          <a 
+            href="https://invent.kde.org/drowsywings/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="contact-link github-link"
+          >
+            <FaGitlab/>
           </a>
         </div>
         

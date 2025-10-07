@@ -1,19 +1,35 @@
 .projects-section {
   padding: 4rem 0;
+
+  @media (max-width: 1024px) {
+    padding: 3.5rem 0;
+  }
+
+  @media (max-width: 768px) {
+    padding: 3rem 0;
+  }
 }
 
-// Main projects container matching original
 .projects-container {
   margin: 0 auto;
-  max-width: 1000px; // Keep your max-width
-  // Remove the grid layout since original doesn't use it
-  // Projects are directly inside this container
+  max-width: 1000px;
+
+  @media (max-width: 768px) {
+    padding: 0 1rem;
+  }
 }
 
-// Keep your header styling since original doesn't have it
 .projects-header {
   text-align: center;
   margin-bottom: 3rem;
+
+  @media (max-width: 1024px) {
+    margin-bottom: 2.5rem;
+  }
+
+  @media (max-width: 768px) {
+    margin-bottom: 2rem;
+  }
 }
 
 .projects-title {
@@ -21,6 +37,15 @@
   color: #4a5568;
   margin-bottom: 1rem;
   font-family: inherit;
+  font-size: 2rem;
+
+  @media (max-width: 1024px) {
+    font-size: 1.85rem;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 1.75rem;
+  }
 }
 
 .title-underline {
@@ -29,22 +54,9 @@
   background: #6c63ff;
   margin: 0 auto;
   border-radius: 2px;
-}
 
-// Remove .projects-grid since we're not using it anymore
-// Projects are now directly mapped in .projects-container
-
-// Responsive design
-@media (max-width: 768px) {
-  .projects-section {
-    padding: 3rem 0;
-  }
-  
-  .projects-container {
-    padding: 0 1rem;
-  }
-  
-  .projects-title {
-    font-size: 1.75rem;
+  @media (max-width: 768px) {
+    width: 50px;
+    height: 3px;
   }
 }

@@ -7,6 +7,9 @@ max-width: 1260px;
   display: flex;
   justify-content: flex-end;
   gap: 4.5rem;
+  @media (max-width: 768px) {
+    justify-content: center;
+  }
 }
 
 .nav-link {

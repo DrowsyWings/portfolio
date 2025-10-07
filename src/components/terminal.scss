@@ -1,11 +1,25 @@
 .terminal-container {
   max-width: 1000px;
   margin: 0 auto;
+
+  @media (max-width: 768px) {
+    padding: 0 0.5rem;
+  }
 }
 
 .hero-section {
   margin-bottom: 5rem;
   margin-top: 5rem;
+
+  @media (max-width: 1024px) {
+    margin-bottom: 4rem;
+    margin-top: 4rem;
+  }
+
+  @media (max-width: 768px) {
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+  }
 }
 
 .hero-header {
@@ -13,22 +27,49 @@
   align-items: baseline;
   margin-bottom: 3rem;
   gap: 2rem;
-  
+
+  @media (max-width: 1024px) {
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  @media (max-width: 768px) {
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+  }
+
   .terminal-prompt {
     color: #747fe0;
     font-size: 4.5rem;
     font-weight: bold;
     margin-right: 0.5rem;
     line-height: 1;
+
+    @media (max-width: 1024px) {
+      font-size: 3.5rem;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 2.5rem;
+      margin-right: 0.3rem;
+    }
   }
-  
+
   .terminal-name {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: #747fe0;
     font-size: 4.5rem;
     line-height: 1;
+
+    @media (max-width: 1024px) {
+      font-size: 3.5rem;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 2.5rem;
+    }
   }
-  
+
   .terminal-cursor {
     font-family: monospace;
     color: #747fe0a6;
@@ -36,42 +77,67 @@
     margin-left: 1.2rem;
     animation: blink 1s infinite;
     line-height: 1;
+
+    @media (max-width: 1024px) {
+      font-size: 3rem;
+      margin-left: 1rem;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 2rem;
+      margin-left: 0.5rem;
+    }
   }
 }
 
 .hero-content {
   margin-left: 0;
-  
+
   .intro-line {
     font-size: 1.3rem;
     line-height: 40px;
     color: #495057;
     margin-bottom: 0.8rem;
-    
+
+    @media (max-width: 1024px) {
+      font-size: 1.2rem;
+      line-height: 36px;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 1rem;
+      line-height: 28px;
+      margin-bottom: 0.6rem;
+    }
+
     .company {
       font-weight: 600;
     }
-    
+
     .side-projects-link {
       color: #747fe0;
       font-weight: bold;
       text-decoration: none;
-      
+
       &:hover {
         text-decoration: underline;
       }
     }
   }
 }
-// Terminal window 
+
 .terminal-window {
-  background: #5a5d7a; // Changed from gradient to solid color matching $fadedPurple
-  border-radius: 8px; // Changed to match original's bottom-only rounding
+  background: #5a5d7a;
+  border-radius: 8px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
   overflow: hidden;
   margin: 2rem 0;
-}
 
+  @media (max-width: 768px) {
+    border-radius: 6px;
+    margin: 1.5rem 0;
+  }
+}
 
 .terminal-titlebar {
   background: #e4e3e5;
@@ -79,80 +145,123 @@
   display: flex;
   align-items: center;
   border-bottom: 1px solid #bbb;
+
+  @media (max-width: 768px) {
+    padding: 10px;
+  }
 }
 
 .terminal-buttons {
   display: flex;
   gap: 0px;
-  
+
   .btn-close,
   .btn-minimize,
   .btn-maximize {
     width: 12px;
     height: 12px;
     border-radius: 50%;
-    margin-left: 9px; // Match original margin
+    margin-left: 9px;
+
+    @media (max-width: 768px) {
+      width: 10px;
+      height: 10px;
+      margin-left: 7px;
+    }
   }
-  
+
   .btn-close {
-    background-color: #f96256; 
-    border: solid 1px #f65549; 
+    background-color: #f96256;
+    border: solid 1px #f65549;
   }
-  
+
   .btn-minimize {
-    background-color: #fdbc3d; 
-    border: solid 1px #ffb524; 
+    background-color: #fdbc3d;
+    border: solid 1px #ffb524;
   }
-  
+
   .btn-maximize {
-    background-color: #33c948; 
-    border: solid 1px #2dbb41; 
+    background-color: #33c948;
+    border: solid 1px #2dbb41;
   }
 }
 
 .terminal-body {
-  font-size: inherit; // Let it inherit from parent
-  line-height: 24px; // Match original line-height
+  font-size: inherit;
+  line-height: 24px;
   color: #ffffff;
-  
-  // Add first and last child padding like original
+
+  @media (max-width: 768px) {
+    font-size: 0.9rem;
+    line-height: 20px;
+  }
+
   .terminal-line:first-child {
     padding-top: 35px;
+
+    @media (max-width: 768px) {
+      padding-top: 25px;
+    }
   }
-  
+
   .terminal-line:last-child {
     padding-bottom: 60px;
+
+    @media (max-width: 768px) {
+      padding-bottom: 30px;
+    }
   }
 }
 
 .terminal-line {
-  margin-left: 35px; 
-  margin-right: 35px; // Match original right margin
-  line-height: 24px; // Match original line-height
-  
+  margin-left: 35px;
+  margin-right: 35px;
+  line-height: 24px;
+
+  @media (max-width: 1024px) {
+    margin-left: 25px;
+    margin-right: 25px;
+  }
+
+  @media (max-width: 768px) {
+    margin-left: 15px;
+    margin-right: 15px;
+    line-height: 20px;
+  }
+
   &.value {
-    margin-left: 35px; // Keep consistent with other lines
-    margin-bottom: 25px; // Match original spacing
-    color:#e7d184 ;
+    margin-left: 35px;
+    margin-bottom: 25px;
+    color: #e7d184;
+
+    @media (max-width: 1024px) {
+      margin-left: 25px;
+      margin-bottom: 20px;
+    }
+
+    @media (max-width: 768px) {
+      margin-left: 15px;
+      margin-bottom: 15px;
+      word-break: break-word;
+    }
   }
-  
+
   .prompt {
-    color: #f7f7f7; // Match original input-statement color
-    margin-right: 0; // Remove margin, use content spacing instead
-    
+    color: #f7f7f7;
+    margin-right: 0;
   }
-  
+
   .property {
     color: #f7f7f7;
   }
-  
+
   .string {
-    color: #e7d184; 
+    color: #e7d184;
     text-decoration: none;
   }
-  
+
   a {
-    color: #35feff; 
+    color: #35feff;
     text-decoration: none;
   }
 }
